@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'rest_framework',
     "debug_toolbar",
     "likes",
     "store",
@@ -141,3 +142,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "reactvisiual/build/static"),
 ]
+
+
+REST_FRAMEWORK = {
+    'COURCE_DECIMAL_TO_STRING': False
+}
