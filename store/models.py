@@ -4,8 +4,6 @@ from uuid import uuid4
 
 
 # Create your models here.
-
-
 class Promotion(models.Model):
     description = models.CharField(max_length=255)
     discount = models.FloatField()
