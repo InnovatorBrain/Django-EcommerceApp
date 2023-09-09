@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, Collection
+from .models import Product, Collection, Cart, CartItem
 from decimal import Decimal
 
 
@@ -18,7 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
     )
     price_with_tax = serializers.SerializerMethodField(method_name="calculate_tax")
     collection = serializers.HyperlinkedRelatedField(
-        queryset=Collection.objects.all(), view_name="collection-detail"
+        queryset=Collection.objects.all(), view_name="CollectionDetail"
     )
 
     class Meta:
@@ -35,3 +35,15 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def calculate_tax(self, product: Product):
         return product.unit_price * Decimal(1.1)
+
+
+class CartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cart
+        fields = ["id", "created_at"]
+
+
+class CartItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CartItem
+        fields = ["id", "product", "quantity"]
