@@ -104,13 +104,24 @@ class Cart(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4)
     created_at = models.DateTimeField(auto_now_add=True)
 
+
 class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name="items")
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField()
 
     class Meta:
-        unique_together = [['cart', 'product']]
+        unique_together = [["cart", "product"]]
 
 
+class Review(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="reviews"
+    )
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    description = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.name
