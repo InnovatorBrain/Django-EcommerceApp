@@ -1,5 +1,5 @@
 from django_filters.rest_framework import FilterSet
-from .models import Product, Collection, Review
+from .models import Product
 
 
 class ProductFilter(FilterSet):

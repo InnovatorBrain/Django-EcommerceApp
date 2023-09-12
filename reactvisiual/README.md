@@ -16,3 +16,19 @@ A brief overview of my education, work experience, and a few personal projects a
 # React Resturent App 
 
 ### This is a react application project for a resturent, contains all components  
+
+
+
+
+81:29
+وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ ٢٩
+
+But you cannot will ˹to do so˺, except by 
+the Will of Allah, the Lord of all worlds.
+
+اور تمہارے چاہے بھی کچھ نہیں ہوسکتا جب تک
+ کہ اللہ نہ چاہے جو تمام جہانوں کا ربّ ہے۔
+— بیان القرآن (ڈاکٹر اسرار احمد)
+
+
+
